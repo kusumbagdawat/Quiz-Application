@@ -2,7 +2,9 @@ import axios from "axios"
 
 // Point this at your Spring Boot API gateway.
 // You can override it at build/runtime via VITE_API_BASE_URL.
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8765"
+const BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://api-gateway-zg6e.onrender.com"
 
 export const TOKEN_KEY = "assesspro_token"
 
