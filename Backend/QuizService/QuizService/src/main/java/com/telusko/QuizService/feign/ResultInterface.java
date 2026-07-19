@@ -5,7 +5,10 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient("RESULT-SERVICE")
+@FeignClient(
+    name = "result-service",
+    url = "${result.service.url}"
+)
 public interface ResultInterface {
 
     @PostMapping("/result/save")
